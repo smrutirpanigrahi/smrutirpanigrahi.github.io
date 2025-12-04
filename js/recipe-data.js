@@ -1,0 +1,176 @@
+const recipes = [
+    {
+        id: 'odisha-chicken-curry',
+        title: 'Odisha Chicken Curry',
+        // Place your image in images/recipes/ and update the filename below
+        image: 'images/recipes/odisha-chicken-curry.jpg',
+        description: 'A traditional slow-cooked heritage recipe, featuring a rich blend of roasted spices, ginger, and garlic. A Sunday classic.',
+        tags: ['Non-Veg', 'Spicy', 'Traditional'],
+        prepTime: '30 mins',
+        cookTime: '1 hr',
+        servings: '4',
+        ingredients: [
+            '1 kg Chicken, curry cut',
+            '4 large Onions, finely sliced',
+            '2 tbsp Ginger-Garlic paste',
+            '2 large Potatoes, cut into halves (optional)',
+            '2 Tomatoes, chopped',
+            '1 tsp Turmeric powder',
+            '2 tsp Red Chili powder',
+            '1 tbsp Chicken Masala',
+            'Whole spices (Cinnamon, Cardamom, Cloves, Bay leaf)',
+            'Mustard Oil for cooking',
+            'Salt to taste',
+            'Fresh Coriander for garnish'
+        ],
+        instructions: [
+            'Marinate the chicken with turmeric, chili powder, salt, and a little mustard oil. Let it sit for 30 mins.',
+            'Heat mustard oil in a heavy-bottomed pan. Fry the potatoes until golden and set aside.',
+            'In the same oil, add whole spices and let them splutter.',
+            'Add sliced onions and fry until they turn deep golden brown.',
+            'Add ginger-garlic paste and sauté until the raw smell goes away.',
+            'Add tomatoes and cook until they soften and oil separates.',
+            'Add the marinated chicken and cook on high heat for 5-7 mins to seal the juices.',
+            'Lower the heat, cover, and cook for 20-25 mins, stirring occasionally.',
+            'Add fried potatoes and warm water for gravy. Simmer until chicken is tender.',
+            'Garnish with fresh coriander and serve hot with steamed rice.'
+        ]
+    },
+    {
+        id: 'hyderabadi-chicken-biryani',
+        title: 'Hyderabadi Chicken Biryani',
+        image: 'images/recipes/chicken-biryani.jpg',
+        description: 'Fragrant long-grain basmati rice layered with marinated chicken, saffron milk, and fried onions, cooked on "dum".',
+        tags: ['Non-Veg', 'Rice', 'Spicy'],
+        prepTime: '45 mins',
+        cookTime: '50 mins',
+        servings: '6',
+        ingredients: [
+            '2 cups Basmati Rice, soaked',
+            '750g Chicken, cut into pieces',
+            '1 cup Yogurt (Curd)',
+            '2 large Onions, thinly sliced and fried (Barista)',
+            '2 tbsp Ginger-Garlic paste',
+            '1/2 cup Mint leaves',
+            '1/2 cup Coriander leaves',
+            '2 tsp Biryani Masala',
+            '1 tsp Red Chili powder',
+            '1/2 tsp Turmeric powder',
+            'Saffron strands soaked in warm milk',
+            'Ghee and Oil',
+            'Whole spices (Shahi Jeera, Bay leaf, Cardamom, Cinnamon, Cloves)',
+            'Salt to taste'
+        ],
+        instructions: [
+            'Marinate chicken with yogurt, ginger-garlic paste, biryani masala, chili powder, turmeric, and salt for 1-2 hours.',
+            'Parboil the soaked rice with whole spices and salt until 70% cooked. Drain and set aside.',
+            'In a heavy pot, heat oil/ghee. Add half the fried onions and cook the marinated chicken until half done.',
+            'Layer the chicken at the bottom of the pot.',
+            'Top with the parboiled rice. Sprinkle saffron milk, remaining fried onions, mint, and coriander.',
+            'Drizzle ghee on top. Seal the pot with dough or a tight lid.',
+            'Cook on low heat (dum) for 25-30 mins.',
+            'Let it rest for 10 mins before serving with raita and salad.'
+        ]
+    },
+    {
+        id: 'paneer-butter-masala',
+        title: 'Paneer Butter Masala',
+        image: 'images/recipes/paneer-butter-masala.jpg',
+        description: 'Soft cottage cheese cubes simmered in a rich, creamy tomato and cashew-based gravy, finished with fenugreek leaves.',
+        tags: ['Veg', 'Curry', 'Rich'],
+        prepTime: '20 mins',
+        cookTime: '30 mins',
+        servings: '4',
+        ingredients: [
+            '250g Paneer, cubed',
+            '4 large Tomatoes, roughly chopped',
+            '2 Onions, roughly chopped',
+            '15-20 Cashew nuts',
+            '1 tbsp Ginger-Garlic paste',
+            '2 tbsp Butter',
+            '1 tbsp Oil',
+            '1 tsp Kashmiri Red Chili powder',
+            '1/2 tsp Garam Masala',
+            '1 tbsp Kasuri Methi (Dried Fenugreek leaves)',
+            '2 tbsp Fresh Cream',
+            'Salt and Sugar to taste'
+        ],
+        instructions: [
+            'Boil onions, tomatoes, and cashews in water until soft. Drain and blend into a smooth paste.',
+            'Heat oil and butter in a pan. Add ginger-garlic paste and sauté.',
+            'Add the onion-tomato-cashew paste and cook until oil separates.',
+            'Add turmeric, chili powder, and salt. Cook for another 2 mins.',
+            'Add water to adjust consistency and bring to a boil.',
+            'Add paneer cubes and garam masala. Simmer for 5 mins.',
+            'Crush kasuri methi between your palms and add it to the gravy.',
+            'Finish with fresh cream and serve hot with naan or jeera rice.'
+        ]
+    },
+    {
+        id: 'prawn-malai-curry',
+        title: 'Prawn Malai Curry',
+        image: 'images/recipes/prawn-malai-curry.jpg',
+        description: 'A delicate Bengali specialty where tiger prawns are poached in a sweet and savory coconut milk sauce with mustard oil.',
+        tags: ['Non-Veg', 'Seafood', 'Mild'],
+        prepTime: '15 mins',
+        cookTime: '25 mins',
+        servings: '3',
+        ingredients: [
+            '500g Tiger Prawns, cleaned and deveined',
+            '1 cup Coconut Milk (thick)',
+            '1 Onion, paste',
+            '1 tsp Ginger paste',
+            '1 tsp Garlic paste',
+            '2 Green Chilies, slit',
+            '1 tsp Turmeric powder',
+            '1 tsp Red Chili powder',
+            '1 tsp Sugar',
+            'Mustard Oil',
+            'Whole spices (Cardamom, Cinnamon, Cloves)'
+        ],
+        instructions: [
+            'Marinate prawns with salt and turmeric. Lightly fry them in mustard oil for 1-2 mins and set aside.',
+            'In the same oil, add whole spices. Add onion paste and sauté until golden.',
+            'Add ginger-garlic paste, turmeric, and chili powder. Cook well.',
+            'Pour in the coconut milk and bring to a gentle simmer.',
+            'Add sugar, salt, and green chilies.',
+            'Add the fried prawns and cook for 5 mins (do not overcook).',
+            'Drizzle a little raw mustard oil on top for authentic flavor and serve with steamed rice.'
+        ]
+    },
+    {
+        id: 'chicken-karahi',
+        title: 'Chicken Karahi',
+        image: 'images/recipes/chicken-karahi.jpg',
+        description: 'A local favorite featuring tender chicken cooked in a wok-style karahi with tomatoes, ginger, and aromatic spices.',
+        tags: ['Non-Veg', 'Spicy', 'Local'],
+        prepTime: '20 mins',
+        cookTime: '35 mins',
+        servings: '4',
+        ingredients: [
+            '1 kg Chicken, cut into pieces',
+            '4 large Tomatoes, chopped',
+            '2 tbsp Ginger, julienned',
+            '4-5 Green Chilies, slit',
+            '1 tbsp Ginger-Garlic paste',
+            '1 large Onion, sliced',
+            '1 tsp Red Chili powder',
+            '1 tsp Coriander powder',
+            '1/2 tsp Turmeric powder',
+            '1 tsp Garam Masala',
+            'Oil or Ghee for cooking',
+            'Fresh Coriander for garnish',
+            'Salt to taste'
+        ],
+        instructions: [
+            'Heat oil/ghee in a karahi or wok. Add sliced onions and fry until golden.',
+            'Add ginger-garlic paste and sauté until the raw smell disappears.',
+            'Add chicken pieces and cook on high heat for 5-7 mins until they change color.',
+            'Add tomatoes, red chili powder, coriander powder, turmeric, and salt. Mix well.',
+            'Cover and cook on medium heat for 20-25 mins until chicken is tender and oil separates.',
+            'Add julienned ginger and green chilies. Cook for another 5 mins.',
+            'Sprinkle garam masala and mix well.',
+            'Garnish with fresh coriander and serve hot with naan or roti.'
+        ]
+    }
+];

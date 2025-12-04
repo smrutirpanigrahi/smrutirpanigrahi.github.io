@@ -1,8 +1,513 @@
 <!DOCTYPE html>
-<html>
-<body>
-<h1>Hello World</h1>
-  <p>I'm hosted with GitHub Pages.</p>
-  <p>@Smruti Ranjan Panigrahi</p>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smruti Ranjan Panigrahi - Senior Data Engineer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="leading-normal tracking-normal">
+
+  <!-- Header -->
+  <header id="header"
+    class="fixed w-full z-30 top-0 text-[var(--text-title)] bg-[var(--header-bg)] backdrop-blur-sm shadow-md transition-colors duration-300">
+    <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2">
+      <div class="pl-4 flex items-center">
+        <a class="text-[var(--accent)] text-2xl font-bold" href="#">SRP.</a>
+      </div>
+      <div class="block lg:hidden pr-4 flex items-center gap-4">
+        <button id="theme-toggle-mobile"
+          class="theme-toggle p-2 rounded-full hover:bg-[var(--bg-secondary)] transition-colors">
+          <i class="fas fa-sun text-xl"></i>
+        </button>
+        <button id="nav-toggle" class="flex items-center p-1 text-[var(--accent)] hover:text-[var(--text-primary)]">
+          <svg class="fill-current h-6 w-6" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <title>Menu</title>
+            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+          </svg>
+        </button>
+      </div>
+      <div
+        class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block mt-2 lg:mt-0 bg-[var(--bg-primary)] lg:bg-transparent p-4 lg:p-0 lg:pr-4 z-20"
+        id="nav-content">
+        <ul class="list-reset lg:flex justify-end flex-1 items-center lg:space-x-8 text-lg space-y-4 lg:space-y-0">
+          <li><a class="nav-link" href="#home"><span class="text-[var(--accent)] text-sm">01.</span> Home</a></li>
+          <li><a class="nav-link" href="#experience"><span class="text-[var(--accent)] text-sm">02.</span>
+              Experience</a></li>
+          <li><a class="nav-link" href="#skills"><span class="text-[var(--accent)] text-sm">03.</span> Skills</a></li>
+          <li><a class="nav-link" href="#projects"><span class="text-[var(--accent)] text-sm">04.</span> Projects</a>
+          </li>
+          <li><a class="nav-link" href="#insights"><span class="text-[var(--accent)] text-sm">05.</span> Insights</a>
+          </li>
+          <li><a class="nav-link" href="#hobbies"><span class="text-[var(--accent)] text-sm">06.</span> Hobbies</a></li>
+          <li class="lg:hidden">
+            <a href="mailto:smrutirpanigrahi@gmail.com?subject=Resume%20Request&body=Hi%20I%20want%20to%20connect"
+              class="block px-4 py-3 mt-2 rounded border-2 border-[var(--accent)] bg-[var(--accent-dim)] text-[var(--accent)] hover:bg-[var(--accent)] hover:text-[var(--bg-primary)] transition-all font-semibold text-center">
+              <i class="fas fa-envelope mr-2"></i> Contact for Resume
+            </a>
+          </li>
+          <li class="hidden lg:block">
+            <a href="mailto:smrutirpanigrahi@gmail.com?subject=Resume%20Request&body=Hi%20I%20want%20to%20connect"
+              class="ml-4 px-4 py-2 rounded border-2 border-[var(--accent)] bg-[var(--accent-dim)] text-[var(--accent)] hover:bg-[var(--accent)] hover:text-[var(--bg-primary)] transition-all font-semibold">
+              <i class="fas fa-envelope mr-2"></i> Contact
+            </a>
+          </li>
+          <li class="hidden lg:block">
+            <button id="theme-toggle-desktop" class="theme-toggle ml-4">
+              <i class="fas fa-sun text-xl"></i>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Home Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center text-center relative">
+      <div id="particles-js"></div>
+      <div class="relative z-10" id="hero-content">
+        <!-- Dynamic Content -->
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 px-4">
+      <div class="container mx-auto">
+        <h2 class="section-title text-4xl font-bold text-center mb-16 reveal">Career Trajectory</h2>
+
+        <div class="max-w-4xl mx-auto reveal">
+          <!-- Vertical Line Container -->
+          <div class="relative border-l-2 border-[var(--bg-tertiary)] ml-4 md:ml-32 space-y-12 pb-4"
+            id="experience-timeline">
+            <!-- Dynamic Content -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 px-4">
+      <div class="container mx-auto text-center">
+        <h2 class="section-title text-4xl font-bold mb-12 reveal">Technical Expertise</h2>
+        <div class="max-w-6xl mx-auto reveal" id="skills-container">
+          <!-- Dynamic Content -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 px-4">
+      <div class="container mx-auto">
+        <h2 class="section-title text-4xl font-bold text-center mb-12 reveal">Key Initiatives</h2>
+        <div class="max-w-6xl mx-auto">
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="projects-grid">
+            <!-- Dynamic Content -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Thoughts & Insights Section -->
+    <section id="insights" class="py-20 px-4">
+      <div class="container mx-auto">
+        <h2 class="section-title text-4xl font-bold text-center mb-12 reveal">Thoughts & Insights</h2>
+        <div class="max-w-6xl mx-auto reveal">
+          <div
+            class="flex flex-col items-center md:flex-row md:justify-between md:items-end mb-8 border-b border-[var(--bg-tertiary)] pb-4 gap-4 text-center md:text-left">
+            <h3 class="text-2xl font-semibold text-[var(--text-title)] flex items-center gap-3">
+              <i class="fab fa-linkedin text-[var(--accent)]"></i> Latest from LinkedIn
+            </h3>
+            <a href="https://www.linkedin.com/in/smrutirpanigrahi/" target="_blank"
+              class="text-[var(--text-secondary)] hover:text-[#0077B5] transition-colors flex items-center gap-2 text-sm font-semibold group">
+              <span>@smrutirpanigrahi</span>
+              <i class="fab fa-linkedin text-xl group-hover:scale-110 transition-transform"></i>
+            </a>
+          </div>
+
+          <!-- Insights Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="insights-grid">
+            <!-- Dynamic Insight Cards -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hobbies Section -->
+    <section id="hobbies" class="py-20 px-4">
+      <div class="container mx-auto">
+        <div
+          class="reveal max-w-6xl mx-auto p-8 md:p-12 rounded-lg border border-[var(--bg-tertiary)] bg-[var(--bg-secondary)] shadow-xl transition-colors duration-300">
+          <h2 class="section-title text-4xl font-bold text-center mb-16">Beyond Engineering</h2>
+
+          <div class="space-y-20">
+            <!-- Photography / Instagram Section -->
+            <div class="reveal">
+              <div
+                class="flex flex-col items-center md:flex-row md:justify-between md:items-end mb-8 border-b border-[var(--bg-tertiary)] pb-4 gap-4 text-center md:text-left">
+                <h3 class="text-3xl font-bold text-[var(--text-title)] flex items-center gap-3">
+                  <i class="fas fa-camera-retro text-[var(--accent)]"></i> Photography
+                </h3>
+                <a href="https://instagram.com/storiesofsmruti" target="_blank"
+                  class="text-[var(--text-secondary)] hover:text-[#E1306C] transition-colors flex items-center gap-2 text-sm font-semibold group">
+                  <span>@storiesofsmruti</span>
+                  <i class="fab fa-instagram text-xl group-hover:rotate-12 transition-transform"></i>
+                </a>
+              </div>
+
+              <!-- Instagram Grid Style -->
+              <!-- LightWidget WIDGET -->
+              <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script><iframe
+                src="//lightwidget.com/widgets/b18fbce783835103996b65dc8a84289c.html" scrolling="no"
+                allowtransparency="true" class="lightwidget-widget"
+                style="width:100%;border:0;overflow:hidden;"></iframe>
+            </div>
+
+            <!-- From My Kitchen Section -->
+            <div class="reveal">
+              <h3
+                class="text-3xl font-bold text-[var(--text-title)] text-left mb-8 flex items-center gap-3 border-b border-[var(--bg-tertiary)] pb-4">
+                <i class="fas fa-utensils text-[var(--accent)]"></i> From My Kitchen
+              </h3>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-8" id="home-recipes-grid">
+                <!-- Dynamic Recipe Cards (Top 4) -->
+              </div>
+              <div class="text-center mt-8">
+                <a href="recipes.html"
+                  class="inline-block border border-[var(--accent)] text-[var(--accent)] px-6 py-2 rounded hover:bg-[var(--accent-dim)] transition-colors font-semibold text-sm">
+                  Show More <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer
+    class="bg-[var(--bg-primary)] border-t border-[var(--bg-tertiary)] transition-colors duration-300 relative z-10">
+    <div class="container mx-auto py-8 px-4 text-center text-[var(--text-title)]">
+      <div class="flex justify-center space-x-6 mb-4">
+        <a href="https://www.linkedin.com/in/smrutirpanigrahi/" target="_blank"
+          class="text-[var(--text-secondary)] hover:text-[var(--accent)] text-2xl"><i class="fab fa-linkedin"></i></a>
+        <a href="https://x.com/smruti_rp" target="_blank"
+          class="text-[var(--text-secondary)] hover:text-[var(--accent)] text-2xl"><i class="fab fa-x-twitter"></i></a>
+        <a href="https://github.com/smrutirpanigrahi" target="_blank"
+          class="text-[var(--text-secondary)] hover:text-[var(--accent)] text-2xl"><i class="fab fa-github"></i></a>
+      </div>
+      <p class="text-[var(--text-secondary)]">Designed & Built by <a href="mailto:smrutirpanigrahi@gmail.com"
+          class="text-[var(--accent)] hover:underline" target="_blank" rel="noopener">Smruti Ranjan Panigrahi</a></p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="js/site-data.js"></script>
+  <script src="js/recipe-data.js"></script>
+  <script>
+    // Theme Management
+    const html = document.documentElement;
+    const toggleButtons = document.querySelectorAll('.theme-toggle');
+    const icons = document.querySelectorAll('.theme-toggle i');
+
+    // Configuration for Particles (Function to generate config based on color)
+    const getParticlesConfig = (color) => ({
+      "particles": {
+        "number": { "value": 80, "density": { "enable": true, "value_area": 800 } },
+        "color": { "value": color },
+        "shape": { "type": "circle" },
+        "opacity": { "value": 0.5, "random": false },
+        "size": { "value": 5, "random": true },
+        "line_linked": {
+          "enable": true,
+          "distance": 150,
+          "color": color === "#64ffda" ? "#233554" : "#cbd5e1", // Dark line for dark mode, light line for light mode
+          "opacity": 0.4,
+          "width": 1
+        },
+        "move": { "enable": true, "speed": 1, "out_mode": "out" }
+      },
+      "interactivity": {
+        "detect_on": "canvas",
+        "events": { "onhover": { "enable": true, "mode": "repulse" }, "onclick": { "enable": true, "mode": "push" } },
+        "modes": { "repulse": { "distance": 100, "duration": 0.4 }, "push": { "particles_nb": 4 } }
+      },
+      "retina_detect": true
+    });
+
+    const updateParticles = (theme) => {
+      // Re-initialize particles with new color
+      const accentColor = theme === 'light' ? '#0d9488' : '#64ffda';
+      if (window.pJSDom && window.pJSDom.length > 0) {
+        // If particles exist, we might need to destroy/refresh, 
+        // but particlesJS doesn't have a clean destroy method exposed easily.
+        // Re-calling load effectively resets it.
+        particlesJS('particles-js', getParticlesConfig(accentColor));
+      } else {
+        particlesJS('particles-js', getParticlesConfig(accentColor));
+      }
+    };
+
+    const toggleTheme = () => {
+      const currentTheme = html.getAttribute('data-theme');
+      const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+
+      html.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+
+      // Update Icons
+      icons.forEach(icon => {
+        icon.className = newTheme === 'light' ? 'fas fa-moon text-xl' : 'fas fa-sun text-xl';
+      });
+
+      // Update Particles
+      updateParticles(newTheme);
+    };
+
+    // Initialize
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    html.setAttribute('data-theme', savedTheme);
+    icons.forEach(icon => {
+      icon.className = savedTheme === 'light' ? 'fas fa-moon text-xl' : 'fas fa-sun text-xl';
+    });
+    updateParticles(savedTheme);
+
+    toggleButtons.forEach(btn => btn.addEventListener('click', toggleTheme));
+
+    // Mobile nav toggle
+    document.getElementById('nav-toggle').onclick = function () {
+      document.getElementById("nav-content").classList.toggle("hidden");
+    }
+
+    // Close mobile menu on link click
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        document.getElementById("nav-content").classList.add("hidden");
+      });
+    });
+
+    // Scroll animations
+    const reveal = () => {
+      const reveals = document.querySelectorAll('.reveal');
+      for (let i = 0; i < reveals.length; i++) {
+        const windowHeight = window.innerHeight;
+        const elementTop = reveals[i].getBoundingClientRect().top;
+        const elementVisible = 150;
+
+        if (elementTop < windowHeight - elementVisible) {
+          reveals[i].classList.add('active');
+        } else {
+          reveals[i].classList.remove('active');
+        }
+      }
+    };
+    window.addEventListener('scroll', reveal);
+    reveal(); // Initial check
+
+    // Active nav link on scroll
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        if (pageYOffset >= sectionTop - 60) {
+          current = section.getAttribute('id');
+        }
+      });
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href').includes(current)) {
+          link.classList.add('active');
+        }
+      });
+    });
+
+    // Render Dynamic Content
+    document.addEventListener('DOMContentLoaded', () => {
+      // Hero
+      const heroContent = document.getElementById('hero-content');
+      if (heroContent && siteData.hero) {
+        heroContent.innerHTML = `
+                <h1 class="text-5xl md:text-7xl font-bold text-[var(--text-title)] mb-4">${siteData.hero.name}</h1>
+                <p class="text-2xl md:text-4xl text-[var(--accent)]">${siteData.hero.title}</p>
+                <p class="mt-6 max-w-2xl mx-auto text-lg text-[var(--text-title)] leading-relaxed px-4">
+                    ${siteData.hero.bio}
+                </p>
+            `;
+      }
+
+      // Experience
+      const experienceTimeline = document.getElementById('experience-timeline');
+      if (experienceTimeline && siteData.experience) {
+        siteData.experience.forEach(job => {
+          const detailsHtml = job.details.map(detail => `<li>${detail}</li>`).join('');
+
+          const item = document.createElement('div');
+          item.className = 'relative pl-8 sm:pl-12 group milestone-item cursor-pointer';
+          item.innerHTML = `
+                    <!-- Year Label -->
+                    <div class="hidden md:block absolute -left-16 md:-left-32 top-0 w-14 md:w-28 text-right pr-4">
+                        <span class="text-xl md:text-2xl font-bold text-[var(--text-secondary)] group-hover:text-[var(--accent)] transition-colors font-mono">${job.year}</span>
+                    </div>
+
+                    <!-- Dot -->
+                    <div class="milestone-dot absolute -left-[9px] top-1 w-5 h-5 rounded-full z-10 border-2"></div>
+
+                    <!-- Content -->
+                    <div class="bg-[var(--bg-secondary)] p-6 rounded-lg shadow-lg border border-transparent group-hover:border-[var(--bg-tertiary)] transition-all">
+                        <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-1 w-full">
+                            <div class="flex flex-col md:flex-row md:items-center gap-1 md:gap-2">
+                                <span class="md:hidden text-lg font-bold text-[var(--accent)] font-mono">${job.year}</span>
+                                <h3 class="text-xl font-bold text-[var(--text-title)] transition-colors">${job.role}</h3>
+                            </div>
+                            <span class="text-xs font-mono text-[var(--accent)] bg-[var(--bg-primary)] px-2 py-1 rounded mt-2 md:mt-0">${job.period}</span>
+                        </div>
+                        <div class="text-lg text-[var(--text-primary)] font-semibold mb-2">${job.company} <span class="text-[var(--text-secondary)] text-sm font-normal">| ${job.location}</span></div>
+
+
+                        <!-- Expandable Details -->
+                        <div class="milestone-details">
+                            <ul class="list-disc list-inside text-[var(--text-primary)] space-y-2 text-base leading-relaxed">
+                                ${detailsHtml}
+                            </ul>
+                        </div>
+                    </div>
+                `;
+          experienceTimeline.appendChild(item);
+        });
+
+        // Re-attach event listeners for mobile interaction
+        const milestoneItems = document.querySelectorAll('.milestone-item');
+
+        // Click handler
+        milestoneItems.forEach(item => {
+          item.addEventListener('click', () => {
+            item.classList.toggle('active-mobile');
+          });
+        });
+
+        // Intersection Observer for Scroll
+        if ('IntersectionObserver' in window) {
+          const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                // Add active class when in view
+                entry.target.classList.add('active-mobile');
+                // Stop observing once expanded so user can manually collapse it without it re-expanding
+                observer.unobserve(entry.target);
+              }
+            });
+          }, {
+            threshold: 0.3, // Lower threshold for earlier triggering
+            rootMargin: "0px 0px -10% 0px" // Less aggressive margin
+          });
+
+          milestoneItems.forEach(item => {
+            observer.observe(item);
+          });
+        }
+      }
+
+      // Skills
+      const skillsContainer = document.getElementById('skills-container');
+      if (skillsContainer && siteData.skills) {
+        // Use grid for desktop, stack for mobile
+        skillsContainer.className = "max-w-6xl mx-auto reveal grid grid-cols-1 md:grid-cols-3 gap-8";
+
+        siteData.skills.forEach(skillGroup => {
+          const itemsHtml = skillGroup.items.map(item =>
+            `<span class="skill-tag px-4 py-2 rounded-full cursor-default text-sm">${item}</span>`
+          ).join('');
+
+          const groupDiv = document.createElement('div');
+          groupDiv.className = "mb-10 md:mb-0"; // Remove bottom margin on desktop since we use grid gap
+          groupDiv.innerHTML = `
+                    <h3 class="text-2xl font-semibold text-[var(--text-title)] mb-6">${skillGroup.category}</h3>
+                    <div class="flex flex-wrap justify-start gap-3">
+                        ${itemsHtml}
+                    </div>
+                `;
+          skillsContainer.appendChild(groupDiv);
+        });
+      }
+
+      // Projects
+      const projectsGrid = document.getElementById('projects-grid');
+      if (projectsGrid && siteData.projects) {
+        siteData.projects.forEach(project => {
+          const card = document.createElement('div');
+          card.className = 'card p-8 rounded-lg reveal border-t-2 border-transparent hover:border-[var(--accent)]';
+          card.innerHTML = `
+                    <h3 class="text-2xl font-bold text-[var(--text-title)] mb-4">${project.title}</h3>
+                    <p class="text-[var(--text-secondary)] mb-4">
+                        ${project.description}
+                    </p>
+                    <div class="text-sm text-[var(--accent)]">${project.tags}</div>
+                `;
+          projectsGrid.appendChild(card);
+        });
+      }
+
+      // Insights
+      const insightsGrid = document.getElementById('insights-grid');
+      if (insightsGrid && siteData.insights) {
+        siteData.insights.forEach(insight => {
+          const card = document.createElement('div');
+          card.className = 'card p-6 rounded-lg reveal border border-[var(--bg-tertiary)] hover:border-[var(--accent)] transition-all cursor-pointer group bg-[var(--bg-secondary)]';
+          card.onclick = () => window.open(insight.link, '_blank');
+          card.innerHTML = `
+                    <div class="flex flex-col h-full">
+                        <div class="flex items-start justify-between mb-3">
+                            <span class="text-xs font-mono text-[var(--accent)] bg-[var(--bg-primary)] px-2 py-1 rounded">${insight.date}</span>
+                            <i class="fab fa-linkedin text-[var(--accent)] text-lg group-hover:scale-110 transition-transform"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-[var(--text-title)] mb-3 group-hover:text-[var(--accent)] transition-colors line-clamp-2">${insight.title}</h3>
+                        <p class="text-[var(--text-secondary)] mb-4 flex-grow line-clamp-3 text-sm leading-relaxed">
+                            ${insight.excerpt}
+                        </p>
+                        <div class="flex items-center justify-between mt-auto pt-4 border-t border-[var(--bg-tertiary)]">
+                            <div class="text-xs text-[var(--accent)]">${insight.tags}</div>
+                            <span class="text-sm text-[var(--accent)] font-semibold group-hover:translate-x-1 transition-transform">Read more →</span>
+                        </div>
+                    </div>
+                `;
+          insightsGrid.appendChild(card);
+        });
+      }
+
+      // Home Recipes (Top 4)
+      const homeRecipesGrid = document.getElementById('home-recipes-grid');
+      if (homeRecipesGrid && typeof recipes !== 'undefined') {
+        const topRecipes = recipes.slice(0, 4);
+        topRecipes.forEach(recipe => {
+          const card = document.createElement('div');
+          card.className = 'card p-6 rounded-lg flex flex-col sm:flex-row items-start hover:bg-[var(--bg-tertiary)] transition-colors group border border-transparent hover:border-[var(--accent-dim)] cursor-pointer';
+          card.onclick = () => window.location.href = `recipe-detail.html?id=${recipe.id}`;
+          card.innerHTML = `
+            <img src="${recipe.image}" alt="${recipe.title}"
+              onerror="this.src='https://placehold.co/400x300/233554/64ffda?text=${encodeURIComponent(recipe.title)}'"
+              class="w-full h-48 sm:w-24 sm:h-24 rounded-lg flex-shrink-0 object-cover mb-4 sm:mb-0 sm:mr-6 border-2 border-transparent group-hover:border-[var(--accent)] transition-all shadow-md">
+            <div>
+              <h4 class="text-xl font-bold text-[var(--text-title)] group-hover:text-[var(--accent)] transition-colors mb-2">
+                ${recipe.title}
+              </h4>
+              <p class="text-[var(--text-secondary)] text-sm leading-relaxed">${recipe.description}</p>
+            </div>
+          `;
+          homeRecipesGrid.appendChild(card);
+        });
+      }
+    });
+  </script>
 </body>
+
 </html>

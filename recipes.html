@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>From My Kitchen - Smruti Ranjan Panigrahi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="leading-normal tracking-normal">
+
+    <!-- Header -->
+    <header id="header"
+        class="fixed w-full z-30 top-0 text-[var(--text-title)] bg-[var(--header-bg)] backdrop-blur-sm shadow-md transition-colors duration-300">
+        <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2">
+            <div class="pl-4 flex items-center">
+                <a class="text-[var(--accent)] text-2xl font-bold" href="index.html">SRP.</a>
+            </div>
+            <div class="block lg:hidden pr-4 flex items-center gap-4">
+
+                <button id="nav-toggle"
+                    class="flex items-center p-1 text-[var(--accent)] hover:text-[var(--text-primary)]">
+                    <svg class="fill-current h-6 w-6" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <title>Menu</title>
+                        <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+                    </svg>
+                </button>
+            </div>
+            <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block mt-2 lg:mt-0 bg-[var(--bg-primary)] lg:bg-transparent p-4 lg:p-0 z-20"
+                id="nav-content">
+                <ul
+                    class="list-reset lg:flex justify-end flex-1 items-center lg:space-x-8 text-lg space-y-4 lg:space-y-0">
+                    <li><a class="nav-link" href="index.html#home"><span class="text-[var(--accent)] text-sm">01.</span>
+                            Home</a></li>
+                    <li><a class="nav-link" href="index.html#experience"><span
+                                class="text-[var(--accent)] text-sm">02.</span>
+                            Experience</a></li>
+                    <li><a class="nav-link" href="index.html#skills"><span
+                                class="text-[var(--accent)] text-sm">03.</span> Skills</a></li>
+                    <li><a class="nav-link" href="index.html#projects"><span
+                                class="text-[var(--accent)] text-sm">04.</span> Projects</a>
+                    </li>
+                    <li><a class="nav-link active" href="#"><span class="text-[var(--accent)] text-sm">05.</span>
+                            Recipes</a></li>
+                    <li class="hidden lg:block">
+                        <button id="theme-toggle-desktop" class="theme-toggle ml-4">
+                            <i class="fas fa-sun text-xl"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <!-- Particles Background -->
+    <div id="particles-js"></div>
+
+    <main class="pt-24 pb-20 px-4 relative z-10">
+        <div class="container mx-auto">
+            <div class="text-center mb-16">
+                <h1 class="text-4xl md:text-5xl font-bold text-[var(--text-title)] mb-4">From My Kitchen</h1>
+                <div class="flex flex-col items-center gap-4 mb-8">
+                    <p class="text-xl text-[var(--text-title)] text-center">
+                        A collection of my favorite recipes, from traditional heritage dishes to modern experiments.
+                    </p>
+                    <button id="clear-filter"
+                        class="hidden text-sm border border-[var(--accent)] text-[var(--accent)] px-4 py-2 rounded hover:bg-[var(--accent-dim)] transition-colors whitespace-nowrap">
+                        Clear Filter <i class="fas fa-times ml-2"></i>
+                    </button>
+                </div>
+
+                <div id="recipe-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Recipes will be loaded dynamically -->
+                </div>
+
+                <div class="text-center mt-12">
+                    <a href="index.html#hobbies"
+                        class="inline-block border border-[var(--accent)] text-[var(--accent)] px-8 py-3 rounded hover:bg-[var(--accent-dim)] transition-colors font-semibold">
+                        <i class="fas fa-arrow-left mr-2"></i> Back to Profile
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer
+        class="bg-[var(--bg-primary)] border-t border-[var(--bg-tertiary)] transition-colors duration-300 relative z-10">
+        <div class="container mx-auto py-8 px-4 text-center text-[var(--text-title)]">
+            <div class="flex justify-center space-x-6 mb-4">
+                <a href="https://www.linkedin.com/in/smrutirpanigrahi/" target="_blank"
+                    class="text-[var(--text-secondary)] hover:text-[var(--accent)] text-2xl"><i
+                        class="fab fa-linkedin"></i></a>
+                <a href="https://x.com/smruti_rp" target="_blank"
+                    class="text-[var(--text-secondary)] hover:text-[var(--accent)] text-2xl"><i
+                        class="fab fa-x-twitter"></i></a>
+                <a href="https://github.com/smrutirpanigrahi" target="_blank"
+                    class="text-[var(--text-secondary)] hover:text-[var(--accent)] text-2xl"><i
+                        class="fab fa-github"></i></a>
+            </div>
+            <p class="text-[var(--text-secondary)]">Designed & Built by <a href="mailto:smrutirpanigrahi@gmail.com"
+                    class="text-[var(--accent)] hover:underline">Smruti Ranjan Panigrahi</a></p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="js/recipe-data.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Theme Management
+            const html = document.documentElement;
+            const toggleButtons = document.querySelectorAll('.theme-toggle');
+            const icons = document.querySelectorAll('.theme-toggle i');
+
+            const toggleTheme = () => {
+                const currentTheme = html.getAttribute('data-theme');
+                const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+                html.setAttribute('data-theme', newTheme);
+                localStorage.setItem('theme', newTheme);
+                icons.forEach(icon => {
+                    icon.className = newTheme === 'light' ? 'fas fa-moon text-xl' : 'fas fa-sun text-xl';
+                });
+            };
+
+            const savedTheme = localStorage.getItem('theme') || 'dark';
+            html.setAttribute('data-theme', savedTheme);
+            icons.forEach(icon => {
+                icon.className = savedTheme === 'light' ? 'fas fa-moon text-xl' : 'fas fa-sun text-xl';
+            });
+
+            // Particles configuration
+            const getParticlesConfig = (color) => ({
+                "particles": {
+                    "number": { "value": 80, "density": { "enable": true, "value_area": 800 } },
+                    "color": { "value": color },
+                    "shape": { "type": "circle" },
+                    "opacity": { "value": 0.5, "random": false },
+                    "size": { "value": 5, "random": true },
+                    "line_linked": {
+                        "enable": true,
+                        "distance": 150,
+                        "color": color === "#64ffda" ? "#233554" : "#cbd5e1",
+                        "opacity": 0.4,
+                        "width": 1
+                    },
+                    "move": { "enable": true, "speed": 1, "out_mode": "out" }
+                },
+                "interactivity": {
+                    "detect_on": "canvas",
+                    "events": { "onhover": { "enable": true, "mode": "repulse" }, "onclick": { "enable": true, "mode": "push" } },
+                    "modes": { "repulse": { "distance": 100, "duration": 0.4 }, "push": { "particles_nb": 4 } }
+                },
+                "retina_detect": true
+            });
+
+            // Initialize particles
+            const particleTheme = localStorage.getItem('theme') || 'dark';
+            const accentColor = particleTheme === 'light' ? '#0d9488' : '#64ffda';
+
+            // Ensure particles.js is loaded before initializing
+            if (typeof particlesJS !== 'undefined') {
+                particlesJS('particles-js', getParticlesConfig(accentColor));
+            }
+
+            // Update particles on theme change
+            const originalToggleTheme = toggleTheme;
+            const toggleThemeWithParticles = () => {
+                originalToggleTheme();
+                const newTheme = html.getAttribute('data-theme');
+                const newAccentColor = newTheme === 'light' ? '#0d9488' : '#64ffda';
+                if (typeof particlesJS !== 'undefined') {
+                    particlesJS('particles-js', getParticlesConfig(newAccentColor));
+                }
+            };
+
+            toggleButtons.forEach(btn => btn.addEventListener('click', toggleThemeWithParticles));
+
+            // Mobile nav toggle
+            const navToggle = document.getElementById('nav-toggle');
+            if (navToggle) {
+                navToggle.onclick = function () {
+                    document.getElementById("nav-content").classList.toggle("hidden");
+                }
+            }
+
+            // Close mobile menu on link click
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    document.getElementById("nav-content").classList.add("hidden");
+                });
+            });
+
+            // Render Recipes
+            const grid = document.getElementById('recipe-grid');
+
+            if (typeof recipes !== 'undefined' && grid) {
+                recipes.forEach(recipe => {
+                    const tagsHtml = recipe.tags.map(tag =>
+                        `<span class="recipe-tag cursor-pointer text-xs font-mono text-[var(--accent)] bg-[var(--bg-primary)] px-2 py-1 rounded hover:bg-[var(--accent-dim)] transition-colors">${tag}</span>`
+                    ).join('');
+
+                    const card = document.createElement('div');
+                    card.className = 'card recipe-card p-6 rounded-lg flex flex-col items-start hover:bg-[var(--bg-tertiary)] transition-colors group border border-transparent hover:border-[var(--accent-dim)] cursor-pointer';
+                    card.onclick = () => window.location.href = `recipe-detail.html?id=${recipe.id}`;
+                    card.innerHTML = `
+                        <img src="${recipe.image || recipe.thumbnail}" alt="${recipe.title}"
+                             onerror="this.src='https://placehold.co/600x400/233554/64ffda?text=${encodeURIComponent(recipe.title)}'"
+                             class="w-full h-48 rounded-lg object-cover mb-6 border-2 border-transparent group-hover:border-[var(--accent)] transition-all shadow-md">
+                        <div>
+                            <h4 class="text-xl font-bold text-[var(--text-title)] group-hover:text-[var(--accent)] transition-colors mb-2">
+                                ${recipe.title}
+                            </h4>
+                            <p class="text-[var(--text-secondary)] text-sm leading-relaxed mb-4">
+                                ${recipe.description}
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                ${tagsHtml}
+                            </div>
+                        </div>
+                    `;
+                    grid.appendChild(card);
+                });
+
+                // Tag Filtering
+                const tags = document.querySelectorAll('.recipe-tag');
+                const cards = document.querySelectorAll('.recipe-card');
+                const clearBtn = document.getElementById('clear-filter');
+                let activeTag = null;
+
+                tags.forEach(tag => {
+                    tag.addEventListener('click', (e) => {
+                        e.stopPropagation(); // Prevent card click if any
+                        const tagText = tag.textContent.trim();
+
+                        if (activeTag === tagText) {
+                            // Deactivate
+                            activeTag = null;
+                            clearBtn.classList.add('hidden');
+                            tags.forEach(t => t.classList.remove('active'));
+                            cards.forEach(card => card.style.display = 'flex');
+                        } else {
+                            // Activate
+                            activeTag = tagText;
+                            clearBtn.classList.remove('hidden');
+
+                            // Update UI for tags
+                            tags.forEach(t => {
+                                if (t.textContent.trim() === activeTag) {
+                                    t.classList.add('active');
+                                } else {
+                                    t.classList.remove('active');
+                                }
+                            });
+
+                            // Filter cards
+                            cards.forEach(card => {
+                                const cardTags = Array.from(card.querySelectorAll('.recipe-tag')).map(t => t.textContent.trim());
+                                if (cardTags.includes(activeTag)) {
+                                    card.style.display = 'flex';
+                                } else {
+                                    card.style.display = 'none';
+                                }
+                            });
+                        }
+                    });
+                });
+
+                if (clearBtn) {
+                    clearBtn.addEventListener('click', () => {
+                        activeTag = null;
+                        clearBtn.classList.add('hidden');
+                        tags.forEach(t => t.classList.remove('active'));
+                        cards.forEach(card => card.style.display = 'flex');
+                    });
+                }
+            } else {
+                console.error('Recipes data or grid element not found');
+            }
+        });
+    </script>
+</body>
+
+</html>
