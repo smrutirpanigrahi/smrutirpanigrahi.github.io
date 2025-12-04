@@ -162,11 +162,16 @@
               </div>
 
               <!-- Instagram Grid Style -->
-              <!-- LightWidget WIDGET -->
-              <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script><iframe
-                src="//lightwidget.com/widgets/b18fbce783835103996b65dc8a84289c.html" scrolling="no"
-                allowtransparency="true" class="lightwidget-widget"
-                style="width:100%;border:0;overflow:hidden;"></iframe>
+              <!-- Place <div> tag where you want the feed to appear -->
+              <div id="curator-feed-default-feed-layout"></div>
+
+              <script type="text/javascript">
+                (function () {
+                  var i, e, d = document, s = "script"; i = d.createElement("script"); i.async = 1; i.charset = "UTF-8";
+                  i.src = "https://cdn.curator.io/published/8631ad1e-60aa-4293-8429-731420434e63.js";
+                  e = d.getElementsByTagName(s)[0]; e.parentNode.insertBefore(i, e);
+                })();
+              </script>
             </div>
 
             <!-- From My Kitchen Section -->
