@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be My Valentine?</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&family=Dancing+Script:wght@700&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Outfit', sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+            overflow: hidden;
+            /* Prevent scrolling when button moves */
+        }
+
+        .valentine-font {
+            font-family: 'Dancing Script', cursive;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Floating hearts background */
+        .heart-bg {
+            position: absolute;
+            color: rgba(244, 63, 94, 0.1);
+            /* Rose-500 with low opacity */
+            animation: float 15s infinite linear;
+            z-index: -1;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(110vh) rotate(0deg);
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 1;
+            }
+
+            90% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(-10vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        #yes-btn {
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        #no-btn {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            /* Bouncy transition */
+            position: absolute;
+            z-index: 50;
+            /* Ensure it stays on top */
+        }
+    </style>
+</head>
+
+<body class="h-screen w-screen flex items-center justify-center relative">
+
+    <!-- Background Hearts Container -->
+    <div id="hearts-container" class="absolute inset-0 overflow-hidden pointer-events-none"></div>
+
+    <!-- Main Card -->
+    <main
+        class="glass-card p-8 md:p-12 rounded-3xl shadow-2xl text-center max-w-sm w-full mx-4 z-10 flex flex-col items-center gap-8 relative">
+
+        <div class="space-y-4">
+            <h1 class="text-5xl md:text-6xl text-rose-500 valentine-font font-bold drop-shadow-lg">
+                Will you be my Valentine?
+            </h1>
+            <p class="text-slate-300 text-lg">
+                I promise endless snacks and movie nights. 💖
+            </p>
+        </div>
+
+        <div class="w-full h-32 relative flex items-center justify-center">
+            <!-- Yes Button (Centered initially) -->
+            <button id="yes-btn" onclick="acceptProposal()"
+                class="bg-rose-500 hover:bg-rose-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transform active:scale-95 text-xl z-20">
+                Yes! 🥰
+            </button>
+
+            <!-- No Button (Starts next to Yes, effectively) -->
+            <!-- We wrap buttons in a way that No can move out -->
+        </div>
+
+        <!-- The "No" button is placed absolutely within the body or specific container to move freely. 
+             Ideally, it starts visually near the Yes button. 
+             Let's put it in the flow first, then make it absolute on hover.
+             Actually, for the "chase" effect, absolute positioning from the start or switching is best.
+        -->
+    </main>
+
+    <!-- No Button - Moved outside main for viewport-relative positioning -->
+    <button id="no-btn" onmouseover="dodgeCursor()" ontouchstart="dodgeCursor()"
+        class="bg-slate-700 hover:bg-slate-800 text-slate-300 font-bold py-3 px-8 rounded-full shadow-lg text-xl absolute z-50 transition-all duration-200">
+        No 😢
+    </button>
+
+    <!-- Success Overlay -->
+    <div id="success-overlay"
+        class="fixed inset-0 bg-black/80 hidden items-center justify-center z-50 flex-col gap-6 text-center p-4">
+        <h2 class="text-6xl md:text-8xl valentine-font text-rose-500 animate-bounce">
+            YAY!!! 🎉
+        </h2>
+        <p class="text-2xl text-white">See you on the 14th! ❤️</p>
+        <button onclick="location.reload()" class="mt-8 text-slate-400 hover:text-white underline">
+            Replay
+        </button>
+    </div>
+
+    <!-- Confetti Script -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+    <script>
+        const yesBtn = document.getElementById('yes-btn');
+        const noBtn = document.getElementById('no-btn');
+        const mainCard = document.querySelector('main');
+
+        // Initial positioning of No button relative to Yes button
+        function centerButtons() {
+            const cardRect = mainCard.getBoundingClientRect();
+            // Position No button slightly to the right of the center/bottom of card initially?
+            // Or just let it float. Let's center it initially using JS to be safe.
+            const yesRect = yesBtn.getBoundingClientRect();
+
+            // Set initial position for No button (e.g., to the right of Yes)
+            // We need to account for the fact that Yes button will grow.
+            // Let's place No button relative to the viewport center for simplicity initially.
+
+            // Actually, CSS flexbox in the card sets the layout. 
+            // We want No button to "break free".
+            // Let's set its initial top/left based on the card's position.
+
+            const cardBottom = cardRect.bottom;
+            const cardCenter = cardRect.left + cardRect.width / 2;
+
+            noBtn.style.left = (cardCenter + 20) + 'px';
+            noBtn.style.top = (cardBottom - 100) + 'px'; // Roughly aligned
+        }
+
+        // Run once on load
+        // window.addEventListener('load', centerButtons);
+        // Better: Just place it in the flow initially, then make it absolute on first hover?
+        // Let's stick to absolute positioning from start, calculated centers.
+
+        // Simplified: Place it initially via CSS logic in the center area, then move it.
+        // We'll calculate its initial spot to be "under" the yes button area.
+        noBtn.style.top = '60%';
+        noBtn.style.left = '60%';
+
+        let currentScale = 1;
+
+        function dodgeCursor() {
+            // 1. Calculate boundaries
+            const viewportWidth = window.innerWidth;
+            const viewportHeight = window.innerHeight;
+            const btnWidth = noBtn.offsetWidth;
+            const btnHeight = noBtn.offsetHeight;
+            const padding = 20; // Maintain distance from edges
+
+            // 2. Generate new position within safe bounds
+            // Ensure button stays strictly within [padding, viewport - size - padding]
+            let newLeft = Math.random() * (viewportWidth - btnWidth - padding * 2) + padding;
+            let newTop = Math.random() * (viewportHeight - btnHeight - padding * 2) + padding;
+
+            // Clamp values just in case
+            newLeft = Math.max(padding, Math.min(newLeft, viewportWidth - btnWidth - padding));
+            newTop = Math.max(padding, Math.min(newTop, viewportHeight - btnHeight - padding));
+
+            // 3. Apply Bounce Animation manually via keyframes or just transition
+            // To make it "bounce", we can use a custom bezier and maybe a slight rotation
+            noBtn.style.transition = "all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)";
+            noBtn.style.left = `${newLeft}px`;
+            noBtn.style.top = `${newTop}px`;
+
+            // Add a random rotation for fun/chaos
+            const rotation = (Math.random() - 0.5) * 30; // -15 to +15 deg
+            noBtn.style.transform = `rotate(${rotation}deg)`;
+
+            // 4. Grow the Yes Button
+            currentScale += 0.5;
+            yesBtn.style.transform = `scale(${currentScale})`;
+
+            // Updated text
+            const phrases = ["Yes! 🥰", "Please? 🥺", "Yes !!!", "Please Say Yes! ❤️", "SAY YES! 🌹", "Okay fine... click Yes!"];
+            yesBtn.innerText = phrases[Math.min(Math.floor(currentScale) - 1, phrases.length - 1)] || "YES!!!";
+        }
+
+        function acceptProposal() {
+            // Hide buttons
+            document.querySelector('main').style.display = 'none';
+            noBtn.style.display = 'none';
+
+            // Show overlay
+            document.getElementById('success-overlay').classList.remove('hidden');
+            document.getElementById('success-overlay').classList.add('flex');
+
+            // Fire Confetti
+            var duration = 3 * 1000;
+            var end = Date.now() + duration;
+
+            (function frame() {
+                confetti({
+                    particleCount: 5,
+                    angle: 60,
+                    spread: 55,
+                    origin: { x: 0 },
+                    colors: ['#f43f5e', '#ffffff']
+                });
+                confetti({
+                    particleCount: 5,
+                    angle: 120,
+                    spread: 55,
+                    origin: { x: 1 },
+                    colors: ['#f43f5e', '#ffffff']
+                });
+
+                if (Date.now() < end) {
+                    requestAnimationFrame(frame);
+                }
+            }());
+        }
+
+        // Background Hearts Generator
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.classList.add('heart-bg');
+            heart.innerHTML = '<i class="fas fa-heart"></i>'; // FontAwesome heart
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.fontSize = Math.random() * 20 + 10 + 'px';
+            heart.style.animationDuration = Math.random() * 5 + 10 + 's';
+
+            document.getElementById('hearts-container').appendChild(heart);
+
+            setTimeout(() => {
+                heart.remove();
+            }, 15000);
+        }
+
+        setInterval(createHeart, 500);
+
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</body>
+
+</html>
